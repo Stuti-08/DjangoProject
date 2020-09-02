@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display All</title>
+</head>
+<body>
+	<br><br>
+<center>
+	<table border="1">
+		<tr>
+			<td></td>
+			<td><b>Name</b></td>
+			<td><b>Subject</b></td>
+		</tr>
+		{% for a in Data %}
+		<tr>
+			<td><input type="hidden" value={{a.id}} name="id"></td>
+			<td>{{a.name}}</td>
+			<td>{{a.subject}}</td>
+			<td><a href="/edit/?id={{a.id}}">Edit</a></td>
+			<td><a href="/delete/?id={{a.id}}">Delete</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+	
+</body>
+</html>

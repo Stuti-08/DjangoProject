@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Data</title>
+</head>
+<body>
+	<center>
+		<form method="POST" action="/editNewData/">
+		{% csrf_token %}
+		<table border="2">
+			<tr>
+				<td><input type="hidden"  value='{{id}}' name="id"></td><br>
+				<td>Name: <input type="text" value='{{name}}' name="name"></td><br>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Subject : <input type="text" value='{{subject}}' name="subject"></td>
+			</tr>
+		</table>
+		<input type="submit" name="Submit">
+		</form>
+	</center>
+	
+</body>
+</html>
